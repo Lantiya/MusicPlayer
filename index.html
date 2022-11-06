@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="icons//apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons//favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="icons//safari-pinned-tab.svg" color="#147208">
+    <meta name="msapplication-TileColor" content="#147208">
+    <meta name="theme-color" content="#147208">
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="./js/index.js" defer></script>
+
+    <title>METHED.MUSIC - музыка для вас!</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="visually-hidden">METHED.MUSIC лучший сервис для воспроизведения музыки</h1>
+        <div class="header__container">
+            <img class="header__logo" src="./images/logo.svg" alt="Логотип METHED.MUSIC">
+            <form class="header__search search">
+                <input type="search" class="search__input">
+                <button class="search__btn">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"/>
+                        </svg>
+                </button>
+            </form>
+            <button class="header__favorite-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.28 2 8.5C2 5.42 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.09C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.42 22 8.5C22 12.28 18.6 15.36 13.45 20.04L12 21.35Z"/>
+                    </svg>
+            </button>
+        </div>
+    </header>
+
+    <section class="catalog">
+        <h2 class="visually-hidden">Список треков</h2>
+        <div class="catalog__container">
+            <!-- <button class="catalog__item track" data-track="audio/Korol i SHut - Na krayu.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster"
+                    src="./images/tracks/korol2.jfif"
+                    alt="Korol i SHut - Na krayu"
+                    width="180"
+                    height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track-info__title">На краю</p>
+                    <p class="track-info__artist">Король и шут</p>
+                </div>
+            </button>
+            <button class="catalog__item track" data-track="audio/Korol i SHut - Marionetki.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster"
+                    src="./images/tracks/korol1.jfif"
+                    alt="Korol i SHut - Marionetki"
+                    width="180"
+                    height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track-info__title">Марионетки</p>
+                    <p class="track-info__artist">Король и шут</p>
+                </div>
+            </button>
+            <button class="catalog__item track" data-track="audio/Korol i SHut - Kukla kolduna.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster"
+                    src="./images/tracks/korol.jfif"
+                    alt="Korol i SHut - Kukla kolduna"
+                    width="180"
+                    height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track-info__title">Кукла колдуна</p>
+                    <p class="track-info__artist">Король и шут</p>
+                </div>
+            </button>
+            <button class="catalog__item track" data-track="audio/Alisa - Trassa E-95.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster"
+                    src="./images/tracks/alisa.jfif"
+                    alt="Alisa - Trassa E-95"
+                    width="180"
+                    height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track-info__title">Трасса Е-95</p>
+                    <p class="track-info__artist">Alisa</p>
+                </div>
+            </button>
+            <button class="catalog__item track" data-track="audio/Konstantin Nikolskijj - Muzykant.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster"
+                    src="./images/tracks/nikolskyi.jfif"
+                    alt="Konstantin Nikolskijj - Muzykant"
+                    width="180"
+                    height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track-info__title">Музыкант</p>
+                    <p class="track-info__artist">Константин Никольский</p>
+                </div>
+            </button>
+            <button class="catalog__item track" data-track="audio/Splin - Vykhoda net.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster"
+                    src="./images/tracks/splin.jfif"
+                    alt="Splin - Vykhoda net.mp3"
+                    width="180"
+                    height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track-info__title">Выхода нет</p>
+                    <p class="track-info__artist">Сплин</p>
+                </div>
+            </button>
+            <button class="catalog__item track" data-track="audio/Ariya - Bespechnyj angel.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster"
+                    src="./images/tracks/aria.jfif"
+                    alt="Ariya - Bespechnyj angel"
+                    width="180"
+                    height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track-info__title">Беспечный Ангел</p>
+                    <p class="track-info__artist">Ария</p>
+                </div>
+            </button>
+            <button class="catalog__item track" data-track="audio/Ajella - Krylya Valkirii.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster"
+                    src="./images/tracks/aella.jfif"
+                    alt="Ajella - Krylya Valkirii"
+                    width="180"
+                    height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track-info__title">Крылья валькирии</p>
+                    <p class="track-info__artist">Аэлла</p>
+                </div>
+            </button>
+            <button class="catalog__item track" data-track="audio/Nikelback - Hero.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster"
+                    src="./images/tracks/nickelback.jpeg"
+                    alt="Nikelback - Hero"
+                    width="180"
+                    height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track-info__title">Hero</p>
+                    <p class="track-info__artist">Nikelback</p>
+                </div>
+            </button>
+            <button class="catalog__item track" data-track="audio/Smyslovye Gallyucinacii -Zachem.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster"
+                    src="./images/tracks/smyslovye.jfif"
+                    alt="Smyslovye Gallyucinacii - Zachem"
+                    width="180"
+                    height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track-info__title">Зачем топтать мою любовь</p>
+                    <p class="track-info__artist">Смысловые галюцинации</p>
+                </div>
+            </button>
+            <button class="catalog__item track" data-track="audio/JEpidemiya - Vsadnik iz lda.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster"
+                    src="./images/tracks/vsadnik.jpg"
+                    alt="JEpidemiya - Vsadnik iz lda"
+                    width="180"
+                    height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track-info__title">Всадник из льда</p>
+                    <p class="track-info__artist">Эпидемия</p>
+                </div>
+            </button>
+            <button class="catalog__item track" data-track="audio/Evanescence - Going Under.mp3">
+                <div class="track__img-wrap">
+                    <img class="track__poster"
+                    src="./images/tracks/Evanescence.jfif"
+                    alt="Evanescence - Going Under"
+                    width="180"
+                    height="180">
+                </div>
+                <div class="track__info track-info">
+                    <p class="track-info__title">Going Under</p>
+                    <p class="track-info__artist">Evanescence</p>
+                </div>
+            </button>
+            <button class="catalog__btn-add">
+                <span>Увидеть все</span>
+                <svg width="8" height="12" viewBox="0 0 8 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.589996 10.59L5.17 6L0.589996 1.41L2 0L8 6L2 12L0.589996 10.59Z"/>
+                </svg>     
+            </button> -->
+        </div>
+    </section>
+
+    <section class="player">
+        <h2 class="visually-hidden">Плеер</h2>
+        <div class="player__container">
+            <div class="player__track-info track-info_mobile-center">
+                <p class="track-info__title">Frozen</p>
+                <p class="track-info__artist">Madonna</p>
+            </div>
+            <div class="player__controller">
+                <button class="player__icon player__icon_stop player__controller-stop"></button>
+                <button class="player__icon player__icon_prew player__controller-prew"></button>
+                <button class="player__icon player__icon_pause player__controller-pause"></button>
+                <button class="player__icon player__icon_next player__controller-next"></button>
+                <button class="player__icon player__icon_like player__controller-like"></button>
+            </div>
+            <div class="player__progress-wrap">
+                <div class="player__progress">
+                    <input class="player__progress-input" type="range" min="0" max="1000" value="0">
+                </div>
+                <p class="player__time">
+                    <span class="player__time-passed">0:24</span>
+                    <span>/</span>
+                    <span class="player__time-total">4:31</span>
+                </p>
+            </div>
+            <div class="player__volume-wrap">
+                <div class="player__volume">
+                    <input class="player__volume-input" type="range" min="0" max="100" value="100">
+                </div>
+                <button class="player__icon player__icon_mute player__controller-mute"></button>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
